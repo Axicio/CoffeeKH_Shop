@@ -490,10 +490,8 @@ h2 {
   margin-bottom: 0.4rem;
 }
 
-.footer-social {
-  display: flex;
-  font-size: 1.25rem;
-  gap: 1rem;
+.site-footer a.footer-credit {
+  text-decoration: underline;
 }
 
 .footer-bottom {

@@ -26,7 +26,7 @@ const MENU = [
   { id: "cappuccino", name: "Cappuccino", khmer: "កាពូឈីណូ", price: 2.5, category: "hot", color: "#b98d63", photo: "Images/Cappuccino_at_Sightglass_Coffee.jpg" },
   { id: "flat-white", name: "Flat White", khmer: "ហ្វ្លាតវ៉ាយ", price: 2.75, category: "hot", color: "#b98d63", photo: "Images/flat-white-Coffee.jpg" },
   { id: "matcha", name: "Matcha Latte", khmer: "ម៉ាច់ឆាឡាតេ", price: 3, category: "other", color: "#8fae5d" },
-  { id: "bubble-tea", name: "Bubble Milk Tea", khmer: "តែគុជ", price: 2.75, category: "other", color: "#b98d63", photo: "Images/Bubble%20tea.jpg", best: true },
+  { id: "bubble-tea", name: "Bubble Milk Tea", khmer: "តែគុជ", price: 2.75, category: "other", color: "#b98d63", best: true },
   { id: "croissant", name: "Butter Croissant", khmer: "នំក្រូសង់", price: 2, category: "food", color: "#d99c4f" },
   { id: "banana-cake", name: "Banana Cake", khmer: "នំចេក", price: 1.5, category: "food", color: "#e3bd6d" },
 ];
