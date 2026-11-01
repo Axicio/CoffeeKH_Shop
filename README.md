@@ -15,4 +15,5 @@ A demo coffee shop website built with HTML, Bootstrap and JavaScript. Open `inde
 ## Image credits
 
 - `Images/Cappuccino_at_Sightglass_Coffee.jpg`: [Jonathan McIntosh](https://commons.wikimedia.org/wiki/File:Cappuccino_at_Sightglass_Coffee.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Cropped for display.
+- `Banner/`: AI-generated images made for this project.
 - Other images in `Images/` have not had their licences confirmed. Check them before any commercial use.
