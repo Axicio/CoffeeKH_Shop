@@ -326,6 +326,41 @@ function renderMenu() {
       </div>`
     )
     .join("");
+  watchReveal(document.querySelectorAll("#menuGrid > div"), true);
+}
+
+/* ---------- Scroll fade ---------- */
+
+const REVEAL_SELECTOR = [
+  ".hero .col-lg-7 > *",
+  ".hero-slides",
+  ".section .text-center.mb-4",
+  ".menu-search",
+  "#menuFilters",
+  "#about .col-lg-5 > *",
+  ".feature",
+  ".form-card",
+  ".site-footer .row > div",
+].join(", ");
+const REVEAL_STAGGER_MS = 70;
+
+// Fades items in as they enter the screen and out as they leave, in both scroll directions.
+const revealObserver =
+  "IntersectionObserver" in window
+    ? new IntersectionObserver(
+        (entries) => entries.forEach((e) => e.target.classList.toggle("is-visible", e.isIntersecting)),
+        { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
+      )
+    : null;
+
+function watchReveal(elements, stagger = false) {
+  if (!revealObserver) return;
+  elements.forEach((el, i) => {
+    el.classList.add("reveal");
+    // Cards in the same row of four arrive one after another.
+    if (stagger) el.style.setProperty("--reveal-delay", `${(i % 4) * REVEAL_STAGGER_MS}ms`);
+    revealObserver.observe(el);
+  });
 }
 
 /* ---------- Orders and bookings (saved in this browser only) ---------- */
@@ -465,6 +500,7 @@ function localToday() {
 /* ---------- Wiring ---------- */
 
 document.addEventListener("DOMContentLoaded", () => {
+  watchReveal(document.querySelectorAll(REVEAL_SELECTOR));
   document.getElementById("heroCup").innerHTML = cupSvg("#a9744a", "iced");
   document.getElementById("year").textContent = new Date().getFullYear();
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
